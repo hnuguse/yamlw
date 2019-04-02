@@ -1,6 +1,6 @@
 var yamlwriter = require('./yamlw');
 
-var optionSet = "A-Team";
+var optionSet = "samples/A-Team";
 var toFile = "samples/sample.yml";
 var isExternalSet = true;
 
