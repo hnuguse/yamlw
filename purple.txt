@@ -1,2 +1,0 @@
-variables.welcomeMessage='Hello purple',
-variables.BuildConfiguration='Debug'

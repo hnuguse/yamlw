@@ -1,0 +1,3 @@
+variables.Team='B-Team',
+variables.BuildConfiguration='B-Config',
+variables.New='is new variable'

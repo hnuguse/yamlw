@@ -1,0 +1,14 @@
+#Sample YAML build file
+trigger: 
+ - 'dev/my-task'  
+
+variables:
+  BuildConfiguration: Release
+  Team: 'To be replaced with team name'
+
+jobs:           
+- job: job
+  steps:
+    - powershell: |
+        Write-Host 'The job for $(Team)
+      displayName: Write Output
