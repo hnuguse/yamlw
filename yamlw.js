@@ -1,6 +1,3 @@
-// (c) 2018 Jordan Knight (jakkaj@gmail.com)
-// This code is licensed under MIT license (see LICENSE.txt for details)
-
 var fs = require('fs');
 var fs2 = require("fs-extra");
 var path = require('path');
