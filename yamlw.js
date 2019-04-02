@@ -4,7 +4,7 @@ var path = require('path');
 var yaml = require('js-yaml');
 
 
-var yamlwriter = function (file, dryrun, optionsstring) {
+var yamlwriter = function (file, optionsstring) {
     try {       
 
         var doc;
@@ -49,14 +49,6 @@ var yamlwriter = function (file, dryrun, optionsstring) {
         }
 
         var d = yaml.safeDump(doc);
-        if (dryrun === false) {
-            console.log(`Writing file: ${file}`)
-            fs2.ensureDirSync(path.dirname(file));
-            fs.writeFileSync(file, d);
-        } else {
-            console.log(`Dry-run. Skipping file write`);
-        }
-        //console.log(d);
 
         return d;
     } catch (e) {
