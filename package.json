@@ -1,6 +1,6 @@
 {
-  "name": "yamlw",
-  "version": "1.0.10",
+  "name": "yamlw@hnuguse",
+  "version": "1.0.0",
   "description": "A task to output YAML or JSON. Take build variables and write them to the build directory. Updates existing files or create them from scratch.",
   "main": "yamlw.js",
   "bin": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jakkaj/yamlw.git"
+    "url": "git+https://github.com/hnuguse/yamlw.git"
   },
   "keywords": [
     "VSTS",
@@ -19,12 +19,12 @@
     "JSON",
     "Build"
   ],
-  "author": "jakkaj",
+  "author": "hnuguse",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jakkaj/yamlw/issues"
+    "url": "https://github.com/hnuguse/yamlw/issues"
   },
-  "homepage": "https://github.com/jakkaj/yamlw#readme",
+  "homepage": "https://github.com/hnuguse/yamlw",
   "dependencies": {
     "commander": "^2.15.1",
     "fs-extra": "^6.0.1",
