@@ -1,19 +1,15 @@
-#!/usr/bin/env node
-
-// (c) 2018 Jordan Knight (jakkaj@gmail.com)
-// This code is licensed under MIT license (see LICENSE.txt for details)
-
-//example:
-//yw -f samples/sample2.yaml --set "build.number=23,something.else='skdlfjlksdf'"
+// Example usage
+// Add variables from the samples/A-Team file to the samples/sampl.yml file:
+// node index.js -f samples/sample.yml -s samples/A-Team -e
 
 var program = require('commander');
 var yamlwriter = require('./yamlw');
 
 program
     .version('0.1.0')
-    .option('-d, --dryrun', "Don't save the output, just print it on screen")
     .option('-f, --file [file]', 'The file to load or create')
-    .option('-s, --set [options]', 'Variables to set separated by commas - e.g. "build=true,system.image.version=12"')
+    .option('-s, --set [options]', 'Variables to set: String with comma seperated - e.g. "variables.BuildConfiguration=Release,build=true" or  enter a File and set the -e or --external flag')
+    .option('-e, --external','Load external options file')
 
     .parse(process.argv);
 
@@ -29,12 +25,8 @@ if (!program.set) {
 
 var file = program.file;
 var set = program.set;
-var dry = program.dryrun;
+var external = program.external
 
-if (dry) {
-    console.log("Doing a dry run");
-}
-
-var result = yamlwriter(file, dry, set);
+var result = yamlwriter(file, set, external);
 
 console.log(result);

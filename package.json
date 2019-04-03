@@ -1,11 +1,14 @@
 {
-  "name": "yamlw@hnuguse",
-  "version": "1.0.0",
-  "description": "A task to output YAML or JSON. Take build variables and write them to the build directory. Updates existing files or create them from scratch.",
-  "main": "yamlw.js",
-  "bin": {
-    "yamlw": "index.js"
+  "name": "@hnuguse/yamlw",
+  "version": "1.0.1",
+  "description": "A task to output YAML or JSON. Take build variables and write them to the build directory. Updates existing files or create them from scratch. Forked from https://github.com/jakkaj/yamlw, and adjusted to support loading external files with settings.",
+  "main": "index.js",
+  "dependencies": {
+    "commander": "^2.19.0",
+    "js-yaml": "^3.13.0",
+    "fs-extra": "^6.0.1"
   },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,10 +27,5 @@
   "bugs": {
     "url": "https://github.com/hnuguse/yamlw/issues"
   },
-  "homepage": "https://github.com/hnuguse/yamlw",
-  "dependencies": {
-    "commander": "^2.15.1",
-    "fs-extra": "^6.0.1",
-    "js-yaml": "^3.11.0"
-  }
+  "homepage": "https://github.com/hnuguse/yamlw#readme"
 }
